@@ -1,0 +1,34 @@
+---
+title: "M9-W2-Project"
+author: "Luis Caro"
+date: "June 24, 2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## My office and home locations
+
+```{r,echo=FALSE}
+library(leaflet)
+df <- data.frame(lat = c(4.7056180,4.6621920),
+                 lng = c(-74.059124,-74.0565200))
+
+wps <- c(
+  "<a href='http://www.finac.com'>Office</a>",
+  "<a>Home</a>"
+)
+
+#hopkinsLatLong %>% 
+#  leaflet() %>%
+#  addTiles() %>%
+#  addMarkers(icon = hopkinsIcon, popup = hopkinsSites)
+
+
+df %>% 
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers(, popup = wps)
+```
